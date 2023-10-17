@@ -211,7 +211,7 @@ def complete_task(task_id: str, user: dict = Depends(get_current_user)):
 
 @app.options("/options")
 def get_options(response: Response):
-    response.headers["Allow"] = "OPTIONS, GET, POST, PUT, DELETE, PATCH, HEAD"
+    response.headers["Allow"] = "OPTIONS, GET, POST, PUT, DELETE, PATCH, HEAD, TRACE"
     response.status_code = status.HTTP_204_NO_CONTENT
 
     return
