@@ -66,3 +66,9 @@ The API also supports OPTIONS, HEAD, and TRACE requests:
 
 These endpoints are primarily used for testing and exploring the available HTTP methods.
 
+
+Note: [Web browsers do not support TRACE requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE#browser_compatibility). You can test this endpoint using [cURL](https://curl.se/):
+
+```bash
+curl -v -X TRACE https://tasks-api-8-methods-bbf271afd2c6.herokuapp.com/trace
+```
