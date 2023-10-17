@@ -52,7 +52,7 @@ The API provides the following endpoints:
 - `DELETE /task/{task_id}`: Delete a task.
 - `PATCH /task/{task_id}/complete`: Mark a task as completed.
 
-For detailed request and response examples, refer to the [Swagger Documentation](/), [ReDoc](/redoc), or the API endpoints section of the code.
+For detailed request and response examples, refer to the [Swagger Documentation](https://tasks-api-8-methods-bbf271afd2c6.herokuapp.com/), [ReDoc](https://tasks-api-8-methods-bbf271afd2c6.herokuapp.com/redoc), or the API endpoints section of the code.
 
 ## Authentication
 User registration and login are required to access protected API endpoints. Firebase Authentication is used to securely manage user authentication. To register a new user, use the `/register` endpoint, and for login, use the `/login` endpoint. You will receive an access token for making authenticated requests to other endpoints.
