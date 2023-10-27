@@ -147,11 +147,11 @@ def get_user_tasks(user: dict = Depends(get_current_user)):
 
 @app.post("/task", response_model=GeneralResModel)
 def create_task(task: Task, user: dict = Depends(get_current_user)):
-    task.user_id = user["uid"]
-    new_task_ref = db.collection("tasks").document()
-    new_task_ref.set(task.dict())
+    task_ref = db.collection("tasks").document()
+    task_ref.set({**task.dict(), "user_id": user["uid"]})
 
-    return {"message": "Task created successfully", "task_id": new_task_ref.id}
+    return {"message": "Task created successfully", "task_id": task_ref.id}
+
 
 
 @app.put("/task/{task_id}", response_model=GeneralResModel)
